@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ForgeCAD</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">ForgeCAD</div>
+        <input id="project-name" type="text" aria-label="Nom du projet" />
+        <div class="group">
+          <select id="plane" aria-label="Plan de l'esquisse">
+            <option value="XY">Plan XY (dessus)</option>
+            <option value="XZ">Plan XZ (face)</option>
+            <option value="YZ">Plan YZ (côté)</option>
+          </select>
+          <button id="btn-new-sketch">Nouvelle esquisse</button>
+          <button id="btn-new-extrude">Extruder</button>
+        </div>
+        <div class="spacer"></div>
+        <div class="group">
+          <button id="btn-fit">Recentrer</button>
+          <button id="btn-open">Ouvrir</button>
+          <button id="btn-save">Enregistrer</button>
+          <button id="btn-stl">Exporter en STL</button>
+          <button id="btn-print" class="primary">Imprimer</button>
+        </div>
+      </header>
+      <aside class="side">
+        <section>
+          <h2>Arbre des fonctions</h2>
+          <ul id="feature-list"></ul>
+        </section>
+        <section id="props"></section>
+      </aside>
+      <main id="viewport"></main>
+    </div>
+    <dialog id="sketch-dialog"></dialog>
+    <dialog id="print-dialog"></dialog>
+    <input type="file" id="file-input" accept=".json,application/json" hidden />
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

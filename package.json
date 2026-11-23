@@ -1,0 +1,19 @@
+{
+  "name": "forgecad",
+  "version": "0.1.0",
+  "description": "CAO paramétrique dans le navigateur avec slicer intégré et envoi vers l'imprimante (Anycubic Kobra 2 Pro).",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
